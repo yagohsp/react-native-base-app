@@ -1,0 +1,61 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "jest": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "space-before-function-paren": "off",
+    "react/prop-types": "off",
+    "import/prefer-default-export": "off",
+    "import/no-cycle": "off",
+    "import/no-unresolved": [2, { "ignore": ["@env"] }],
+    "comma-dangle": "off",
+    "object-curly-newline": "off",
+    "no-console": "off",
+    "arrow-parens": [2, "as-needed"],
+    "react/jsx-props-no-spreading": "off",
+    "prefer-destructuring": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 80,
+        "useTabs": false
+      }
+    ],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["."]
+      }
+    }
+  }
+}
