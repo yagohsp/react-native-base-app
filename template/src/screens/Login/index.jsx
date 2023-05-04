@@ -40,6 +40,7 @@ export default function Login() {
             <TextInput
               control={control}
               name="password"
+              type="password"
               label="Senha"
               onSubmitEditing={handleSubmit(onSubmit)}
             />

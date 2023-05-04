@@ -1,20 +1,21 @@
-import { Toast as NativeBaseToast, Box, Text } from 'native-base';
+import { Toast as NativeBaseToast, Text, Button } from 'native-base';
 import React from 'react';
 
 const showToast = (type, message) =>
   NativeBaseToast.show({
     render: () => {
       return (
-        <Box
+        <Button
           bg={type === 'success' ? 'emerald.600' : 'error.500'}
           py="2"
           px="3"
           rounded="sm"
+          onPress={NativeBaseToast.closeAll}
         >
           <Text color="white" fontWeight="medium" fontSize="md">
             {message}
           </Text>
-        </Box>
+        </Button>
       );
     }
   });
