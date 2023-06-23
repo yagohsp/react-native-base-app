@@ -31,7 +31,6 @@ export default function Routes() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log('reload');
     EncryptedStorage.getItem('user')
       .then(encryptedUser => {
         setUser(JSON.parse(encryptedUser)?.username);

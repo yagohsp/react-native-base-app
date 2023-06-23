@@ -6,7 +6,7 @@ const showToast = (type, message) =>
     render: () => {
       return (
         <Button
-          bg={type === 'success' ? 'emerald.600' : 'error.500'}
+          colorScheme={type === 'success' ? 'emerald' : 'error'}
           py="2"
           px="3"
           rounded="sm"
@@ -20,5 +20,10 @@ const showToast = (type, message) =>
     }
   });
 
-export const showSuccess = message => showToast('success', message);
-export const showError = message => showToast('error', message);
+const showSuccess = message => showToast('success', message);
+const showError = message => showToast('error', message);
+
+export const Toast = {
+  showSuccess,
+  showError
+};
